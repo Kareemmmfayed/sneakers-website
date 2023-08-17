@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.navbar {
+    width: 100vw;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    z-index: 100;
+}
+
+.logo {
+    margin: 18px 14px 18px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #697077;
+}
+
+.logo:hover {
+    color: black;
+}
+
+.name {
+    transform: scale(1);
+}
+
+.icons {
+    display: flex;
+}
+
+.profile {
+    margin-right: 5px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.cart {
+    margin-right: 7px;
+    font-size: 34px;
+    transform: scale(0.5);
+    cursor: pointer;
+}
+
+.name {
+    margin-left: 20px;
+}
+
+.logo {
+    display: none;
+}
+
+.line {
+    opacity: 0.4;
+    width: 80%;
+    height: 0.1px;
+    background-color: #808080;
+    margin: 25px auto;
+}
+
+@media screen and (min-width: 700px){
+    .menu {
+        display: flex;
+        list-style: none;
+        flex: 1;
+    }
+
+    .menu > li {
+        padding-left: 30px;
+        color: #808080;
+        cursor: pointer;
+    }
+
+    .menu > li:hover {
+        color: black;
+    }
+
+    .name {
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .line {
+        display: none;
+    }
+
+    .logo {
+        display: flex;
+    } 
+
+    .name {
+        flex: 1;
+    }
+
+    .menu {
+        width: 63%;
+        font-weight: bold;
+        list-style: none;
+        font-family: math;
+        position: absolute;
+        top: -18px;
+        font-size: 18px;
+        align-items: start;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding-top: 78px;
+        padding-left: 8px;
+        left: -100%;
+        transition: all 0.3s;
+        background-color: white;
+    }
+    
+    .menu > li {
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+    
+    .menu > li:hover {
+        background-color: #D3D3D3;
+    
+    }
+    
+    .active {
+        left: 0;
+    }
+    
+    .haha {
+        position: absolute;
+        top: 0;
+    }   
+    
+    .myImg {
+        width: 100%;
+    }
+
+    .landing {
+        position: relative;
+    }
+
+    .right,
+    .left {
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .right {
+        right: 4px;
+    }
+
+    .left {
+        left: 4px;
+    }
+}
