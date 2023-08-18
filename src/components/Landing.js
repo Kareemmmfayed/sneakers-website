@@ -11,6 +11,7 @@ const imgs = [img1, img2, img3, img4]
 
 const Landing = () => {
     const [myImg, setMyImg] = useState(img1)
+    const [items, setItems] = useState(1)
     return (
         <div className='landing'>
             <div className='toHide'>
@@ -33,14 +34,23 @@ const Landing = () => {
                     </ul>
                 </div>
                 <div className='data'>
-                    <span>sneaker company</span>
+                    <span className='sneaker'>sneaker company</span>
                     <h1>Fall limited edition sneakers</h1>
                     <p>These low-profile sneakers are your perfect caual wear companion. Featuring a durable rubber outer sole, They'll
                         withstand anything the weather can offer.
                     </p>
-                </div>
-                <div className='price'>
-                    
+                    <div className='price'>
+                        <div className='nums'>
+                            <span>${(90 * items) / 2}</span>
+                            <span>50%</span>
+                            <span>${90 * items}</span>
+                        </div>
+                        <div className='number'>
+                            <button>-</button>
+                            <span>{items}</span>
+                            <button>+</button>
+                        </div>
+                    </div>
                 </div>
             </div>  
         </div>

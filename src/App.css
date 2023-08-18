@@ -219,7 +219,7 @@ ul img:hover {
     }
 }
 
-.data span {
+.data .sneaker {
     text-transform: uppercase;
     color: orange;
     font-weight: bold;
@@ -232,4 +232,120 @@ ul img:hover {
 
 .landing {
     width: 100vw;
+}
+
+@media screen and (max-width: 700px) {
+    
+    .price .number {
+        margin-top: 40px;
+        width: 129%;
+        background-color: #f7f8fd;
+        padding: 7px;
+        border-radius: 9px;
+    }
+    
+    .price .number button {
+        background-color: #f7f8fd;
+        border: none;
+        color: orange;
+        font-size: 27px;
+        border-radius: 9px;
+        cursor: pointer;
+    }
+    
+    .price .number button:hover {
+        background-color: lightgray;
+    }
+    
+    .price .number span {
+        font-size: 27px;
+        margin-left: 40%;
+        margin-right: 40%;
+    } 
+}
+
+.price {
+    margin-top: 60px;
+}
+
+.price .nums span:first-of-type {
+    font-size: 26px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.price .nums span:nth-of-type(2) {
+    margin: 0 70% 0 46px;
+    background-color: #ffeee3;
+    color: orange;
+    padding: 3px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.price .nums span:nth-of-type(3) {
+    color: grey;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.price .number {
+    margin-top: 40px;
+    width: 129%;
+    background-color: #f7f8fd;
+    padding: 7px;
+    border-radius: 9px;
+}
+
+.price .number button {
+    background-color: #f7f8fd;
+    border: none;
+    color: orange;
+    font-size: 27px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.price .number button:hover {
+    background-color: lightgray;
+}
+
+.price .number span {
+    font-size: 27px;
+    margin-left: 40%;
+    margin-right: 40%;
+} 
+
+@media (min-width: 700px) and (max-width: 740px) {
+    .price .number span {
+        font-size: 27px;
+        margin-left:  35%;
+        margin-right: 35%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .price .number span {
+        font-size: 27px;
+        margin-left: 20%;
+        margin-right: 32%;
+    }
+    .price .number {
+        margin-top: 40px;
+        width: 39%;
+        background-color: #f7f8fd;
+        padding: 7px;
+        border-radius: 9px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 905px) {
+    .price .number span {
+        font-size: 27px;
+        margin-left: 20%;
+        margin-right: 32%;
+    }
+    .price .number {
+        width: 54%;
+    }
 }
