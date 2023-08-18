@@ -332,7 +332,7 @@ ul img:hover {
     }
     .price .number {
         margin-top: 40px;
-        width: 39%;
+        width: 47%;
         background-color: #f7f8fd;
         padding: 7px;
         border-radius: 9px;
@@ -348,4 +348,22 @@ ul img:hover {
     .price .number {
         width: 54%;
     }
+}
+
+.add {
+    margin: 45px 0 0 0;
+    width: 129%;
+    border: none;
+    border-radius: 4px;
+    padding: 13px;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+    font-family: cursive;
+}
+
+.add:hover {
+    background-color: red;
 }

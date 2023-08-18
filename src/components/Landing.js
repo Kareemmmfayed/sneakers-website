@@ -12,6 +12,17 @@ const imgs = [img1, img2, img3, img4]
 const Landing = () => {
     const [myImg, setMyImg] = useState(img1)
     const [items, setItems] = useState(1)
+
+    const handleChange1 = () => {
+        if (items > 0) {
+            setItems(items - 1)
+        }
+    }
+
+    const handleChange2 = () => {
+        setItems(items + 1)
+    }
+
     return (
         <div className='landing'>
             <div className='toHide'>
@@ -46,10 +57,11 @@ const Landing = () => {
                             <span>${90 * items}</span>
                         </div>
                         <div className='number'>
-                            <button>-</button>
+                            <button onClick={handleChange1}>-</button>
                             <span>{items}</span>
-                            <button>+</button>
+                            <button onClick={handleChange2}>+</button>
                         </div>
+                        <button className='add'>Add to cart</button>
                     </div>
                 </div>
             </div>  
