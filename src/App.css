@@ -37,7 +37,12 @@ body {
 .profile {
     margin-right: 5px;
     width: 35px;
+    border-radius: 50%;
     cursor: pointer;
+}
+
+.profile:hover {
+    outline: 2px solid orange;
 }
 
 .cart {
@@ -146,8 +151,12 @@ body {
         width: 100%;
     }
     
-    .desk {
+    .pics {
         display: none;
+    }
+
+    .data {
+        margin: 0;
     }
 }
 
@@ -165,5 +174,62 @@ body {
 }
 
 .pics {
-    width: 58%;
+    width: 50%;
+    margin-right: 10px;
+}
+
+.pics .big {
+    border-radius: 13px;
+    width: 100%;
+    max-width: 420px;
+}
+
+ul {
+    padding: 0;
+    margin: 8px 0 0 0;
+    display: flex;
+    gap: 6px;
+    list-style: none;
+}
+
+ul img {
+    border-radius: 13px;
+    max-width: 95px;
+    margin-left: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+    width: 100%;
+}
+
+ul img:hover {
+    opacity: .5;
+    border: 4px solid orange;
+}
+
+.data {
+    font-family: system-ui;
+    max-width: 380px;
+    width: 90%;
+    margin: 0 0 auto 10px;
+}
+
+@media (min-width: 700px) and (max-width: 900px){
+    ul img {
+        width: 50px;
+    }
+}
+
+.data span {
+    text-transform: uppercase;
+    color: orange;
+    font-weight: bold;
+}
+
+.data p {
+    color: gray;
+    line-height: 1.9;
+}
+
+.landing {
+    width: 100vw;
 }

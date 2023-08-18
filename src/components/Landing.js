@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import img1 from '../images/image-product-1.jpg'
 import img2 from '../images/image-product-2.jpg'
 import img3 from '../images/image-product-3.jpg'
@@ -10,7 +10,7 @@ import { Slide } from 'react-slideshow-image'
 const imgs = [img1, img2, img3, img4]
 
 const Landing = () => {
-
+    const [myImg, setMyImg] = useState(img1)
     return (
         <div className='landing'>
             <div className='toHide'>
@@ -24,12 +24,12 @@ const Landing = () => {
             </div>
             <div className='desk'>
                 <div className='pics'>
-                    <img src={img1} alt='First sneaker' />
+                    <img src={myImg} alt='First sneaker' className='big' />
                     <ul>
-                        <li> <img src={img1} alt='sneaker'/> </li>
-                        <li> <img src={img2} alt='sneaker'/> </li>
-                        <li> <img src={img3} alt='sneaker'/> </li>
-                        <li> <img src={img4} alt='sneaker'/> </li>
+                        <li onClick={() => setMyImg(img1)}> <img src={img1} alt='sneaker'/> </li>
+                        <li onClick={() => setMyImg(img2)}> <img src={img2} alt='sneaker'/> </li>
+                        <li onClick={() => setMyImg(img3)}> <img src={img3} alt='sneaker'/> </li>
+                        <li onClick={() => setMyImg(img4)}> <img src={img4} alt='sneaker'/> </li>
                     </ul>
                 </div>
                 <div className='data'>
@@ -38,6 +38,9 @@ const Landing = () => {
                     <p>These low-profile sneakers are your perfect caual wear companion. Featuring a durable rubber outer sole, They'll
                         withstand anything the weather can offer.
                     </p>
+                </div>
+                <div className='price'>
+                    
                 </div>
             </div>  
         </div>
