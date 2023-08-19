@@ -12,7 +12,13 @@ body {
     display: flex;
     align-items: center;
     position: sticky;
+    top: 0;
     z-index: 100;
+    background-color: white;
+}
+
+.overnav {
+    background-color: #00000000;
 }
 
 .logo {
@@ -182,6 +188,7 @@ body {
     border-radius: 13px;
     width: 100%;
     max-width: 420px;
+    cursor: pointer;
 }
 
 ul {
@@ -365,5 +372,41 @@ ul img:hover {
 }
 
 .add:hover {
-    background-color: red;
+    background-color: goldenrod;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 165%;
+    background: #0000009c;
+}
+
+.carti {
+    width: 310px;
+    position: absolute;
+    top: 80px;
+    right: 43px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.carti h4 {
+    font-family: cursive;
+    padding: 0 20px;
+}
+
+.line2 {
+    height: 0.2px;
+    width: 259px;
+    margin: 0 auto;
+    background-color: #8080806e;
+}
+
+.container {
+    width: 100%;
+    min-height: 210px;
 }

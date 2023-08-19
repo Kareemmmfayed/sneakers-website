@@ -3,14 +3,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faCartShopping, faXmark } from '@fortawesome/free-solid-svg-icons'
 import profile from '../images/image-avatar.png'
 import logo from '../images/logo.svg'
+import Cart from './Cart'
 
 const NavBar = () => {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
 
+    const [showCart, setShowCart] = useState(false)
+
+    const showCartFun = () => {
+        setShowCart(!showCart)
+    }
+
     return (
         <>
-        <div className='navbar'>
+        <div className={click ? "overlay" : ""}></div>
+        <div className={click ? "navbar overnav" : "navbar"}>
             <FontAwesomeIcon icon={click? faXmark : faBars} className='logo' onClick={handleClick} />
             <div className='name'>
             <img src={logo} alt='logo' />
@@ -24,11 +32,12 @@ const NavBar = () => {
                 <li>Contact</li>
             </ul>
             <div className='icons'>
-                <FontAwesomeIcon icon={faCartShopping} className='cart'/>
+                <FontAwesomeIcon icon={faCartShopping} className='cart' onClick={showCartFun}/>
                 <img src={profile} alt='profile' className='profile'/>
             </div>
         </div>
         <div className='line'></div>
+        {showCart && <Cart />}
         </>
     )
 }
