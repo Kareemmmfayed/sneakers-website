@@ -32,7 +32,10 @@ const NavBar = () => {
                 <li>Contact</li>
             </ul>
             <div className='icons'>
-                <FontAwesomeIcon icon={faCartShopping} className='cart' onClick={showCartFun}/>
+                <div className='cartCont'>
+                    {/* <span className='theItems'></span> */}
+                    <FontAwesomeIcon icon={faCartShopping} className='cart' onClick={showCartFun}/>
+                </div>
                 <img src={profile} alt='profile' className='profile'/>
             </div>
         </div>

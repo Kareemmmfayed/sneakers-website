@@ -5,6 +5,7 @@ import img3 from '../images/image-product-3.jpg'
 import img4 from '../images/image-product-4.jpg'
 import 'react-slideshow-image/dist/styles.css'
 import { Slide } from 'react-slideshow-image'
+import PopUp from './PopUp'
 
 
 const imgs = [img1, img2, img3, img4]
@@ -12,6 +13,8 @@ const imgs = [img1, img2, img3, img4]
 const Landing = () => {
     const [myImg, setMyImg] = useState(img1)
     const [items, setItems] = useState(1)
+    const [popUp, setPopUp] = useState(false)
+    const [added, setAdded] = useState(false)
 
     const handleChange1 = () => {
         if (items > 0) {
@@ -21,6 +24,12 @@ const Landing = () => {
 
     const handleChange2 = () => {
         setItems(items + 1)
+    }
+
+    const addToCart = () => {
+        if (items !== 0) {
+            setAdded(true)
+        }
     }
 
     return (
@@ -36,7 +45,7 @@ const Landing = () => {
             </div>
             <div className='desk'>
                 <div className='pics'>
-                    <img src={myImg} alt='First sneaker' className='big' />
+                    <img src={myImg} alt='First sneaker' className='big' onClick={() => setPopUp(!popUp)} />
                     <ul>
                         <li onClick={() => setMyImg(img1)}> <img src={img1} alt='sneaker'/> </li>
                         <li onClick={() => setMyImg(img2)}> <img src={img2} alt='sneaker'/> </li>
@@ -61,10 +70,11 @@ const Landing = () => {
                             <span>{items}</span>
                             <button onClick={handleChange2}>+</button>
                         </div>
-                        <button className='add'>Add to cart</button>
+                        <button className='add' onClick={addToCart} >Add to cart</button>
                     </div>
                 </div>
             </div>  
+            {popUp && <PopUp myImg={myImg} popUp={popUp} setPopUp={setPopUp} />}
         </div>
     )
 }
