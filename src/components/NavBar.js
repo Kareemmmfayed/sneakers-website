@@ -5,7 +5,7 @@ import profile from '../images/image-avatar.png'
 import logo from '../images/logo.svg'
 import Cart from './Cart'
 
-const NavBar = () => {
+const NavBar = ({final, setFinal, items, setItems}) => {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
 
@@ -33,14 +33,13 @@ const NavBar = () => {
             </ul>
             <div className='icons'>
                 <div className='cartCont'>
-                    {/* <span className='theItems'></span> */}
-                    <FontAwesomeIcon icon={faCartShopping} className='cart' onClick={showCartFun}/>
+                    <FontAwesomeIcon icon={faCartShopping} className='cart' onClick={showCartFun} color={final? 'red' : 'black'}/>
                 </div>
                 <img src={profile} alt='profile' className='profile'/>
             </div>
         </div>
         <div className='line'></div>
-        {showCart && <Cart />}
+        {showCart && <Cart final={final} setFinal={setFinal} items={items} setItems={setItems}/>}
         </>
     )
 }

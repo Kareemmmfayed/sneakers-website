@@ -10,25 +10,25 @@ import PopUp from './PopUp'
 
 const imgs = [img1, img2, img3, img4]
 
-const Landing = () => {
+const Landing = ({final, setFinal, items, setItems}) => {
     const [myImg, setMyImg] = useState(img1)
-    const [items, setItems] = useState(1)
     const [popUp, setPopUp] = useState(false)
-    const [added, setAdded] = useState(false)
+    const [num, setNum] = useState(1)
 
     const handleChange1 = () => {
-        if (items > 0) {
-            setItems(items - 1)
+        if (num > 0) {
+            setNum(num - 1)
         }
     }
 
     const handleChange2 = () => {
-        setItems(items + 1)
+        setNum(num + 1)
     }
 
     const addToCart = () => {
-        if (items !== 0) {
-            setAdded(true)
+        if (num !== 0) {
+            setItems(num)
+            setFinal(true)
         }
     }
 
@@ -61,13 +61,13 @@ const Landing = () => {
                     </p>
                     <div className='price'>
                         <div className='nums'>
-                            <span>${(90 * items) / 2}</span>
+                            <span>${(90 * num) / 2}</span>
                             <span>50%</span>
-                            <span>${90 * items}</span>
+                            <span>${90 * num}</span>
                         </div>
                         <div className='number'>
                             <button onClick={handleChange1}>-</button>
-                            <span>{items}</span>
+                            <span>{num}</span>
                             <button onClick={handleChange2}>+</button>
                         </div>
                         <button className='add' onClick={addToCart} >Add to cart</button>
